@@ -1,8 +1,17 @@
-import React, { useEffect } from "react";
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { SearchScreen } from "./app/containers/searchScreen/SearchScreen";
 import "./App.scss";
+import "./reset.css";
 
 function App() {
-  return <div>hello</div>;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<SearchScreen />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

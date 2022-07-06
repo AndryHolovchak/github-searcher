@@ -1,0 +1,55 @@
+.search_screen {
+  height: 100vh;
+
+  &__header {
+    height: 20vh;
+    padding: 2%;
+    text-align: center;
+    box-shadow: 0 0 10px -3px #000;
+
+    &_title {
+      margin-bottom: 4vh;
+      font-size: 4vh;
+      font-weight: 500;
+    }
+  }
+
+  &__loading_message {
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  &__result {
+    height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+.search_result_item {
+  display: flex;
+  align-items: center;
+  padding: 2%;
+
+  & + & {
+    border-top: 1px solid rgba(0, 0, 0, 0.158);
+  }
+
+  &__avatar {
+    width: 15%;
+    margin-right: 5%;
+    border-radius: 6px;
+  }
+
+  &__name {
+    width: 50%;
+    font-size: 3vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__number_of_repos {
+    margin-left: auto;
+    font-size: 3vh;
+  }
+}
