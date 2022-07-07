@@ -1,5 +1,5 @@
 const config = {
-  token: "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", // public token
+  token: "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", // public token
 };
 
 export default config;
