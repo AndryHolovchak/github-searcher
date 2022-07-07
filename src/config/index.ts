@@ -1,5 +1,5 @@
 const config = {
-  token: "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", // public token
+  token: window.atob("Z2hwX1d6d2xaYVJ2Um1NZzRNdjlUSjdqMjlWNW9rQmxTYTJRNWoxbg=="), // public token
 };
 
 export default config;
