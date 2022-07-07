@@ -74,11 +74,11 @@ function* loadNextResultWatcher(): any {
   const userResponses = [];
 
   for (const basicUserInfo of searchResponse.data.items) {
-    const userResponse = request("GET /users/{login}", {
+    const userResponse = request("GET /user/{id}", {
       headers: {
         authorization: `token ${config.token}`,
       },
-      login: basicUserInfo.login,
+      id: basicUserInfo.id,
     });
 
     userResponses.push(userResponse);
