@@ -1,24 +1,6 @@
 .search_screen {
   height: 100vh;
 
-  &__header {
-    height: 20vh;
-    padding: 2%;
-    text-align: center;
-    box-shadow: 0 0 10px -3px #000;
-
-    &_title {
-      margin-bottom: 4vh;
-      font-size: 4vh;
-      font-weight: 500;
-    }
-  }
-
-  &__loading_message {
-    margin-top: 5vh;
-    text-align: center;
-  }
-
   &__result {
     height: 80vh;
     overflow-y: auto;
@@ -29,6 +11,11 @@
   display: flex;
   align-items: center;
   padding: 2%;
+
+  & > * {
+    pointer-events: none;
+    touch-action: none;
+  }
 
   & + & {
     border-top: 1px solid rgba(0, 0, 0, 0.158);
@@ -48,8 +35,14 @@
     text-overflow: ellipsis;
   }
 
-  &__number_of_repos {
+  &__number_of_repos_prefix {
     margin-left: auto;
-    font-size: 3vh;
+    font-size: 2.5vh;
+  }
+
+  &__number_of_repos {
+    width: 10%;
+    font-size: 2.5vh;
+    text-align: right;
   }
 }

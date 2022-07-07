@@ -1,6 +1,5 @@
 const config = {
-  gitHubApiUrl: "https://api.github.com",
-  token: "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",
+  token: "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", // public token
 };
 
 export default config;

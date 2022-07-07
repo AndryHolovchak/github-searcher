@@ -1,0 +1,12 @@
+.header {
+  height: 20vh;
+  padding: 2%;
+  text-align: center;
+  box-shadow: 0 0 10px -3px #000;
+
+  &__title {
+    margin-bottom: 4vh;
+    font-size: 4vh;
+    font-weight: 500;
+  }
+}
