@@ -59,7 +59,7 @@ function* loadUserReposWatcher(): any {
       authorization: `token ${config.token}`,
     },
     reposPerPage,
-    page: Math.max(1, Math.floor(newRepos.length / reposPerPage) + 1),
+    page: Math.max(1, Math.ceil(newRepos.length / reposPerPage)),
     login: userInfo.login,
   });
 

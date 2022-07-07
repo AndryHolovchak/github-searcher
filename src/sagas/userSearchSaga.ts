@@ -62,11 +62,16 @@ function* loadNextResultWatcher(): any {
     return;
   }
 
+  // last request loaded less then usersPerPage
+  if (newResult.length % usersPerPage !== 0) {
+    return;
+  }
+
   const searchResponse = yield request("GET /search/users?q={query}&per_page={usersPerPage}", {
     headers: {
       authorization: `token ${config.token}`,
     },
-    page: Math.max(1, Math.floor(newResult.length / usersPerPage) + 1),
+    page: Math.max(1, Math.ceil(newResult.length / usersPerPage)),
     usersPerPage,
     query,
   });
